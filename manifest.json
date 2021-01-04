@@ -1,0 +1,37 @@
+{
+	"name": "TweetAnnotate",
+	"version": "0.1",
+	"manifest_version": 2,
+	"description": "Reminds to Annotate Tweets with IMGs B",
+	"icons": {
+		"16": "tweetannotate-16x.png",
+		"32": "tweetannotate-32x.png",
+		"48": "tweetannotate-48x.png",
+		"64": "tweetannotate-64x.png",
+		"128": "tweetannotate-128x.png"
+	},
+	"browser_action": {
+		"default_icon": {
+			"16": "tweetannotate-16x.png",
+			"32": "tweetannotate-32x.png",
+			"48": "tweetannotate-48x.png",
+			"64": "tweetannotate-64x.png",
+			"128": "tweetannotate-128x.png"
+		}
+	},
+	"content_scripts": [
+		{
+			"matches": [
+				"https://twitter.com/*"
+			],
+			"js": [
+				"jquery.min.js",
+				"tweetannotate.js"
+			]
+		}
+	],
+	"permissions": [
+		"activeTab",
+		"debugger"
+	]
+}
